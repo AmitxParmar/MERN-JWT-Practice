@@ -11,6 +11,8 @@
 # production
 /build
 
+ignore = dirty
+
 # misc
 .DS_Store
 .env.local
