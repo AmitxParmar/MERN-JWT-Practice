@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json())
 
 mongoose.set('strictQuery', false);
-mongoose.connect('mongodb://localhost:27017/full-mern-stack-video')
+mongoose.connect('mongodb://localhost:27017/full-mern-stack-video',)
 
 app.post('/api/register', async (req, res) => {
     console.log(req.body)
@@ -89,6 +89,6 @@ app.post('/api/quote', async (req, res) => {
     }
 })
 
-app.listen(1337, () => {
-    console.log('Server started on 1337')
+app.listen(8000, () => {
+    console.log('Server started on 8000')
 })

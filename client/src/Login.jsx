@@ -7,7 +7,9 @@ const Login = () => {
     const [password, setPassword] = useState();
 
     async function loginUser(e) {
+
         e.preventDefault()
+
         const response = await fetch("https://localhost:8000/api/login", {
             method: "POST",
             headers: {
@@ -18,19 +20,19 @@ const Login = () => {
                 password,
             }),
         })
+
         const data = await response.json()
+
         console.log(data)
 
         if (data.user) {
             alert('Login successfully!');
             window.location.href = '/quote'
         } else {
-            alert('Please check your username and password')
+            alert('Please check your username and password');
         }
         console.log(data)
     }
-
-
 
     return (
         <section className="bg-gray-50 dark:bg-gray-900">

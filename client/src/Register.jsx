@@ -22,7 +22,9 @@ function Register() {
                 password,
             }),
         })
+        // data
         const data = await response.json()
+
         console.log(data)
     }
 
