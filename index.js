@@ -9,6 +9,7 @@ const bcrypt = require('bcryptjs')
 app.use(cors())
 app.use(express.json())
 
+mongoose.set('strictQuery', false);
 mongoose.connect('mongodb://localhost:27017/full-mern-stack-video')
 
 app.post('/api/register', async (req, res) => {
